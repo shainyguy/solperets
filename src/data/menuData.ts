@@ -6,8 +6,8 @@ import { MenuItem, Review, Stats, DailyPromo, BanquetPackage, BanquetExtra, Loya
 
 // Telegram бот для уведомлений о заказах
 export const TELEGRAM_CONFIG = {
-  BOT_TOKEN: 'YOUR_BOT_TOKEN_HERE', // Получите у @BotFather
-  CHAT_ID: 'YOUR_CHAT_ID_HERE', // Узнайте через @userinfobot
+  BOT_TOKEN: '5191951105:AAESbK_-oU4DNWn195_w9uYy6Y_XUSmQiaI', // Получите у @BotFather
+  CHAT_ID: '574947799', // Узнайте через @userinfobot
 };
 
 // ЮKassa конфигурация

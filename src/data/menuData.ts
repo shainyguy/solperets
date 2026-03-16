@@ -8,6 +8,8 @@ import { MenuItem, Review, Stats, DailyPromo, BanquetPackage, BanquetExtra, Loya
 export const TELEGRAM_CONFIG = {
   BOT_TOKEN: '5191951105:AAESbK_-oU4DNWn195_w9uYy6Y_XUSmQiaI', // Получите у @BotFather
   CHAT_ID: '574947799', // Узнайте через @userinfobot
+  WEBHOOK_URL: 'salt-pepper-bot-production.up.railway.app',
+  WEBHOOK_SECRET: 'your-secret-key-123'
 };
 
 // ЮKassa конфигурация

@@ -149,7 +149,7 @@ const Reviews: React.FC = () => {
         >
           <p className="text-gray-600 mb-4">Читайте также отзывы на Яндекс Картах:</p>
           <a
-            href="https://yandex.ru/maps"
+            href="https://yandex.ru/maps/org/sol_i_perets/172085958854/reviews/?ll=37.282959%2C55.944047&z=16"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 text-orange-500 font-semibold hover:text-orange-600"

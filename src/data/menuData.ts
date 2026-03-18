@@ -4,16 +4,16 @@
 
 // Telegram бот для уведомлений
 export const TELEGRAM_CONFIG = {
-  BOT_TOKEN: 'ВАШ_ТОКЕН_БОТА', // Получить у @BotFather
-  CHAT_ID: 'ВАШ_CHAT_ID',       // Узнать у @userinfobot
+  BOT_TOKEN: '5191951105:AAESbK_-oU4DNWn195_w9uYy6Y_XUSmQiaI', // Получить у @BotFather
+  CHAT_ID: '574947799',       // Узнать у @userinfobot
 };
 
 // Контактная информация
 export const CONTACT_INFO = {
-  phone: '+7 (999) 123-45-67',
-  address: 'г. Химки, мкр. Сходня, ул. Примерная, д. 1',
+  phone: '+7 (925) 767-77-78',
+  address: '​Улица Некрасова, 15, Химки, Московская область',
   workHours: 'Ежедневно с 11:00 до 23:00',
-  coordinates: [55.9512, 37.3097] as [number, number],
+  coordinates: [55.944047, 37.282959] as [number, number],
   instagram: 'https://instagram.com/sol_perec_shodnya',
   telegram: 'https://t.me/sol_perec_shodnya',
   whatsapp: 'https://wa.me/79991234567',
@@ -36,7 +36,7 @@ export const LEGAL_INFO = {
 
 // Акция дня (enabled: false - отключить)
 export const DAILY_PROMO = {
-  enabled: true,
+  enabled: false,
   title: 'Шашлык + Лимонад',
   description: 'При заказе от 1500₽',
   discount: 15,
@@ -334,8 +334,8 @@ export interface NewsItem {
 
 export const newsItems: NewsItem[] = [
   { id: 'veranda', title: 'Скоро открытие летней веранды!', description: 'Уютная веранда с видом на природу', icon: '🌿', isNew: true },
-  { id: 'karaoke', title: '2 караоке-зала готовятся к открытию', description: 'VIP-комнаты с профессиональным звуком', icon: '🎤', isNew: true },
-  { id: 'strong', title: 'Скоро в баре: крепкие напитки', description: 'Виски, коньяк, водка — уже через 2 недели', icon: '🥃', isNew: true },
+  { id: 'karaoke', title: '2 караоке-зала готовятся к открытию', description: 'VIP-комнаты с профессиональным звуком', icon: '🎤', isNew: false },
+  { id: 'strong', title: 'Скоро в баре: крепкие напитки', description: 'Виски, коньяк, водка — уже через 2 недели', icon: '🥃', isNew: false },
 ];
 
 // ========================================

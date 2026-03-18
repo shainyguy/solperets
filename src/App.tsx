@@ -221,10 +221,6 @@ function Hero({ onNavigate }: { onNavigate: (page: string) => void }) {
           Настоящий шашлык и гриль рядом с МЦД Сходня
         </p>
 
-        <p className={`text-lg text-green-400 font-medium mb-8 transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
-          🚚 Бесплатная доставка по Сходне
-        </p>
-
         <div className={`flex flex-col sm:flex-row gap-4 justify-center mb-12 transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
           <button onClick={() => onNavigate('menu')} className="px-8 py-4 bg-gradient-to-r from-orange-500 to-red-500 text-white font-bold rounded-full hover:shadow-lg hover:shadow-orange-500/30 transition-all hover:scale-105">
             Смотреть меню
@@ -369,23 +365,6 @@ function About() {
           ))}
         </div>
 
-        {newsItems.length > 0 && (
-          <div className={`mb-16 transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-            <h3 className="text-2xl font-bold mb-6 text-center">Скоро у нас</h3>
-            <div className="grid md:grid-cols-3 gap-6">
-              {newsItems.map((news) => (
-                <div key={news.id} className="bg-white rounded-2xl p-6 shadow-lg border-l-4 border-orange-500">
-                  <div className="flex items-center gap-3 mb-3">
-                    <span className="text-3xl">{news.icon}</span>
-                    {news.isNew && <span className="bg-green-500 text-white text-xs px-2 py-1 rounded-full">Скоро</span>}
-                  </div>
-                  <h4 className="font-bold text-lg mb-2">{news.title}</h4>
-                  <p className="text-gray-600 text-sm">{news.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        )}
 
         <div className={`transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <h3 className="text-2xl font-bold mb-6 text-center">Наша атмосфера</h3>

@@ -334,8 +334,6 @@ export interface NewsItem {
 
 export const newsItems: NewsItem[] = [
   { id: 'veranda', title: 'Скоро открытие летней веранды!', description: 'Уютная веранда с видом на природу', icon: '🌿', isNew: true },
-  { id: 'karaoke', title: '2 караоке-зала готовятся к открытию', description: 'VIP-комнаты с профессиональным звуком', icon: '🎤', isNew: false },
-  { id: 'strong', title: 'Скоро в баре: крепкие напитки', description: 'Виски, коньяк, водка — уже через 2 недели', icon: '🥃', isNew: false },
 ];
 
 // ========================================

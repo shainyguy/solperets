@@ -99,7 +99,7 @@ export default function AdminPage() {
     try {
       const [o, b, r, m, mi, sv] = await Promise.all([
         sb.from('orders').select('*').order('created_at', { ascending: false }),
-        sb.from('bookings_v2').select('*').order('created_at', { ascending: false }),
+        sb.from('bookings').select('*').order('created_at', { ascending: false }),
         sb.from('reviews').select('*').order('created_at', { ascending: false }),
         sb.from('contact_messages').select('*').order('created_at', { ascending: false }),
         sb.from('menu_items').select('*').order('sort_order', { ascending: true }),
@@ -167,12 +167,12 @@ export default function AdminPage() {
   // ── Бронирования ────────────────────────────────────────────────────────
 
   const updateBooking = async (id: number, upd: any) => {
-    await sb.from('bookings_v2').update(upd).eq('id', id);
+    await sb.from('bookings').update(upd).eq('id', id);
     load();
   };
 
   const deleteBooking = async (id: number) => {
-    await sb.from('bookings_v2').delete().eq('id', id);
+    await sb.from('bookings').delete().eq('id', id);
     load();
   };
 

@@ -22,7 +22,7 @@ export default async function handler(req, res) {
   try {
     if (req.method === 'GET') {
       const { status } = req.query;
-      let query = supabase.from('bookings_v2').select('*').order('created_at', { ascending: false });
+      let query = supabase.from('bookings').select('*').order('created_at', { ascending: false });
       if (status) query = query.eq('status', status);
       const { data, error } = await query;
       if (error) throw error;
@@ -34,7 +34,7 @@ export default async function handler(req, res) {
       if (!body.customer_name || !body.customer_phone || !body.event_date || !body.event_time || !body.guests_count) {
         return res.status(400).json({ error: 'Заполните все обязательные поля' });
       }
-      const { data, error } = await supabase.from('bookings_v2').insert({
+      const { data, error } = await supabase.from('bookings').insert({
         customer_name: body.customer_name,
         customer_phone: body.customer_phone,
         customer_email: body.customer_email || null,
@@ -69,14 +69,14 @@ export default async function handler(req, res) {
       const upd = {};
       if (status !== undefined) upd.status = status;
       if (admin_comment !== undefined) upd.admin_comment = admin_comment;
-      const { data, error } = await supabase.from('bookings_v2').update(upd).eq('id', id).select().single();
+      const { data, error } = await supabase.from('bookings').update(upd).eq('id', id).select().single();
       if (error) throw error;
       return res.status(200).json(data);
     }
 
     if (req.method === 'DELETE') {
       const { id } = req.body;
-      const { error } = await supabase.from('bookings_v2').delete().eq('id', id);
+      const { error } = await supabase.from('bookings').delete().eq('id', id);
       if (error) throw error;
       return res.status(200).json({ ok: true });
     }
